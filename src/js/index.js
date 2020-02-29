@@ -33,7 +33,7 @@ export default class bulmaCalendar extends EventEmitter {
           [key]: this.element.dataset[key]
         };
       }, {}) : {};
-    
+
     // Set default options - dataset attributes are master
     this.options = {
       ...defaultOptions,
@@ -328,7 +328,7 @@ export default class bulmaCalendar extends EventEmitter {
     e.stopPropagation();
 
 	this.clear();
-	
+
 	this.emit('clear', this);
   }
 
@@ -377,7 +377,7 @@ export default class bulmaCalendar extends EventEmitter {
 
   /**
    * Get / Set datetimePicker value
-   * @param {*} date 
+   * @param {*} date
    */
   value(value = null) {
     if (value) {
@@ -416,7 +416,7 @@ export default class bulmaCalendar extends EventEmitter {
     this._ui.header.start.day.innerHTML = this.datePicker.start ? dateFns.format(this.datePicker.start, 'DD', {
       locale: this.locale
     }) : '--';
-    this._ui.header.start.month.innerHTML = this.datePicker.start ? dateFns.format(this.datePicker.start, 'MMMM YYYY', {
+    this._ui.header.start.month.innerHTML = this.datePicker.start ? dateFns.format(this.datePicker.start, 'YYYY MMM', {
       locale: this.locale
     }) : '';
     if (this.datePicker.start) {
@@ -438,7 +438,7 @@ export default class bulmaCalendar extends EventEmitter {
       this._ui.header.end.day.innerHTML = this.options.isRange && this.datePicker.end ? dateFns.format(this.datePicker.end, 'DD', {
         locale: this.locale
       }) : '--';
-      this._ui.header.end.month.innerHTML = this.options.isRange && this.datePicker.end ? dateFns.format(this.datePicker.end, 'MMMM YYYY', {
+      this._ui.header.end.month.innerHTML = this.options.isRange && this.datePicker.end ? dateFns.format(this.datePicker.end, 'YYYY MMM', {
         locale: this.locale
       }) : '';
       if (this.datePicker.end) {

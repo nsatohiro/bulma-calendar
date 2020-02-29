@@ -3,9 +3,9 @@ export default (data) => {
     <div class="datepicker-nav">
         <button type="button" class="datepicker-nav-previous button is-small is-text">${data.icons.previous}</button>
         <div class="datepicker-nav-month-year">
-          <div class="datepicker-nav-month"></div>
-          &nbsp;
           <div class="datepicker-nav-year"></div>
+          &nbsp;
+          <div class="datepicker-nav-month"></div>
         </div>
         <button type="button" class="datepicker-nav-next button is-small is-text">${data.icons.next}</button>
       </div>

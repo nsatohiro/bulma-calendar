@@ -377,7 +377,8 @@ export default class datePicker extends EventEmitter {
 		}));
 		this._ui.body.months.innerHTML = '';
 		this._ui.body.months.appendChild(document.createRange().createContextualFragment(templateMonths({
-			months: monthLabels
+			months: monthLabels,
+			locale: this.locale,
 		})));
 		const months = this._ui.body.months.querySelectorAll('.datepicker-month') || [];
 		months.forEach(month => {
@@ -434,7 +435,7 @@ export default class datePicker extends EventEmitter {
 			this._toggleNextButton();
 		}
 
-		this._ui.navigation.month.innerHTML = dateFns.format(this._visibleDate, 'MMMM', {
+		this._ui.navigation.month.innerHTML = dateFns.format(this._visibleDate, 'MMM', {
 			locale: this.locale
 		});
 		this._ui.navigation.year.innerHTML = dateFns.format(this._visibleDate, 'YYYY', {
